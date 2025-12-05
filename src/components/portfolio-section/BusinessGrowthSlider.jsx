@@ -28,14 +28,14 @@ export default function BusinessGrowthSlider({ slides, topImage, bottomImage }) 
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex justify-between items-center gap-y-[100px]">
-                    <div>
+                  <div className="flex justify-between items-center gap-y-[100px] slides-portfolio">
+                      <div className="w-[28%] portfolio-slide-logo">
                       <img
                         src={slide.logo}
                         alt=""
-                        className="w-[248px] max-w-[100%] pb-[30px]"
+                        className="w-[248px] max-w-[100%] pb-[30px] logo-portfolio"
                       />
-                      <div className="get-btn">
+                      <div className="get-btn portfolio">
                         <Button
                           text={slide.buttonText}
                           icon={slide.buttonIcon}
@@ -44,12 +44,12 @@ export default function BusinessGrowthSlider({ slides, topImage, bottomImage }) 
                       </div>
                     </div>
 
-                    <div className="relative">
-                      <div>
+                     <div className="relative w-[78%] portfolio-slide-img">
+                      <div className="main-img-slide">
                         <img src={slide.mainImage} alt="" />
                       </div>
                       {slide.overlayImage && (
-                        <div className="absolute top-[225px] left-[-70px]">
+                        <div className="absolute top-[225px] left-[-70px] mobile-img">
                           <img
                             src={slide.overlayImage}
                             alt=""
