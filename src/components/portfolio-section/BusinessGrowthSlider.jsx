@@ -8,15 +8,15 @@ import Button from "../Button";
 export default function BusinessGrowthSlider({ slides, topImage, bottomImage }) {
 
   return (
-    <section className="relative poftfolio-slider-slides">
+    <section className="relative poftfolio-slider-slides ">
       <div>
-        <div className="slider-slide-container relative bg-white">
+        <div className="slider-slide-container relative ">
           {topImage && (
             <div className="absolute top-0">
               <img src={topImage} alt="" className="rounded-[30px]" />
             </div>
           )}
-          <div className="slider-slide-img p-[40px]">
+          <div className="slider-slide-img p-[40px] bg-white">
             <Swiper
               pagination={{ clickable: true }}
               modules={[Navigation, Pagination, Autoplay]}

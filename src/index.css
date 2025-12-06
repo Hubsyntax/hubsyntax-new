@@ -493,6 +493,7 @@ span.boost-item.seven {
     gap: 15px;
     justify-content: center;
     border-radius: 20px;
+    width: 100%;
 }
 
 .service-row:hover .devliver-text {
@@ -503,29 +504,17 @@ span.boost-item.seven {
     width: 100%;
 }
 
-.fist-img {
-    border-radius: 10px;
+.project-slider-wrapper-recent .swiper {
+    padding: 65px 0 115px 0;
 }
 
-.seconc-img {
-    border-radius: 10px;
+.project-slider-wrapper-recent .swiper-pagination span.swiper-pagination-bullet {
+    background: #00293F !important;
+    width: 20px !important;
+    height: 5px !important;
+    border-radius: 5px !important;
 }
 
-.project-slider-wrapper-recent .slick-slide.slick-active.slick-center.slick-current {
-    transform: scale(1.8);
-}
-
-.project-slide.relative.left-slide {
-    transform: scale(1.4) translateX(-300px);
-}
-
-.project-slider-wrapper-recent .slick-track {
-    padding: 135px 0;
-}
-
-.project-slide.relative.right-slide {
-    transform: scale(1.4) translateX(300px);
-}
 
 .Facebook {
     background-color: #2C80D3;
@@ -713,19 +702,12 @@ a.custom-icon.whatsapp {
 }
 
 @media screen and (min-width: 2000px) {
-    .project-slider-wrapper-recent .slick-slider {
-        max-width: 3000px;
+    .project-slider-wrapper-recent .swiper {
+        max-width: 2000px;
         width: 100%;
         margin: auto;
     }
 
-    .project-slide.relative.left-slide {
-        transform: scale(1.4) translateX(-400px);
-    }
-
-    .project-slide.relative.right-slide {
-        transform: scale(1.4) translateX(400px);
-    }
 
 }
 
@@ -736,7 +718,6 @@ a.custom-icon.whatsapp {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    background: #ffffff;
 }
 
 .poftfolio-slider-wrapp .poftfolio-slider-slides {
@@ -821,7 +802,29 @@ a.custom-icon.whatsapp {
     justify-content: left;
 }
 
+/*Services Css */
+
+.services-options {
+    border-bottom: 1px solid #C6DDE8;
+    margin-bottom: 40px;
+}
+
+.services-options:last-child {
+    border-bottom: 0;
+    margin: 0;
+}
+
+.services-btn .get-start {
+    background: #00293F;
+    margin: initial;
+    margin-bottom: 50px;
+}
+
 @media screen and (max-width: 1440px) {
+    .project-slider-wrapper-recent .swiper {
+        padding: 48px 0 100px 0;
+    }
+
     .top-up {
         top: -12px !important;
     }
@@ -874,13 +877,6 @@ a.custom-icon.whatsapp {
         height: 120px;
     }
 
-    .project-slide.relative.left-slide {
-        transform: scale(1.4) translateX(-230px);
-    }
-
-    .project-slide.relative.right-slide {
-        transform: scale(1.4) translateX(230px);
-    }
 }
 
 
@@ -919,6 +915,7 @@ a.custom-icon.whatsapp {
 
     .devliver-hover-img {
         left: 51% !important;
+        top:-8px !important;
     }
 
     .clients-wrap {
@@ -977,6 +974,36 @@ a.custom-icon.whatsapp {
 }
 
 @media screen and (max-width: 1024px) {
+    .services-title {
+        font-size: 22px;
+    }
+
+    .services-options .services-img {
+        width: 80px;
+    }
+
+    .relative.service-section {
+        padding: 60px 0 60px 0;
+    }
+
+    .container.service-section h1 {
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+
+    .service-des {
+        font-size: 14px;
+        padding-bottom: 50px;
+    }
+
+    .container.service-section {
+        gap: 50px;
+    }
+
+    .project-slider-wrapper-recent .swiper {
+        padding: 48px 0 80px 0;
+    }
+
     .mobile-img {
         top: 150px;
         left: -45px;
@@ -1405,6 +1432,15 @@ a.custom-icon.whatsapp {
 
 
 @media screen and (max-width: 840px) {
+    .project-slider-wrapper-recent .swiper {
+        padding: 0px 0 50px 0;
+    }
+
+    .center-slide {
+        transform: scale(1);
+        z-index: 3;
+    }
+
     .slider-slide-container .swiper {
         padding: 0;
     }
@@ -1912,6 +1948,14 @@ a.custom-icon.whatsapp {
 }
 
 @media screen and (max-width: 540px) {
+    .container.service-section {
+        display: block;
+    }
+
+    .service-section-wrapping {
+        width: 100%;
+    }
+
     .slider-slide-container .swiper-button-prev {
         top: 80% !important;
     }
@@ -1986,6 +2030,9 @@ a.custom-icon.whatsapp {
 }
 
 @media screen and (max-width: 480px) {
+    .row-slider {
+        width: 50%;
+    }
 
     .slider-slide-container .swiper-button-prev {
         top: 75% !important;
@@ -2291,13 +2338,6 @@ a.custom-icon.whatsapp {
 }
 
 @media screen and (max-width:345px) {
-    .project-slide.relative.right-slide {
-        transform: scale(1.4) translateX(214px);
-    }
-
-    .project-slide.relative.left-slide {
-        transform: scale(1.4) translateX(-214px);
-    }
 
     .img-slider .swiper {
         padding: 106px 0 100px !important;
@@ -2324,5 +2364,18 @@ a.custom-icon.whatsapp {
         left: 73% !important;
         top: 68% !important;
     }
+}
+
+
+
+.slider-btoom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-direction: unset;
+    gap: 0;
 
 }
+
+

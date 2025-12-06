@@ -47,7 +47,7 @@ export default function AgencySlider() {
     return (
         <div className="project-slider-wrapper-agency">
             {sliders.map((settings, idx) => {
-                if (isMobile && idx < 2) return null;
+                if (isMobile && idx < 4) return null;
 
                 return (
                     <div key={idx} className={`row-slider ${idx % 2 === 0 ? 'top-move' : 'bottom-move'}`}>

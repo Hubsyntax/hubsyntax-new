@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import SocialIcon from "./components/Social-icon";
 import Portfolio from "./components/Portfolio";
 import ScaleBussiness from "./components/Scale-bussiness";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <ScaleBussiness />
         <Footer />

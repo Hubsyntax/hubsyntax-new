@@ -20,10 +20,17 @@ import { Navigation, Autoplay } from "swiper/modules";
 export default function App() {
 
   const slides = [
-    slide1, slide2, slide3, slide4, slide5,
-    slide6, slide7, slide8, slide9, slide10, slide11,
-    slide1, slide2, slide3, slide4, slide5,
-    slide6, slide7, slide8, slide9, slide10, slide11
+    'https://hubsyntax.com/uploads/Rectangle 9289 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9290 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9291 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9292 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9293 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9295 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9296 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9297 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9298 (1).svg',
+    'https://hubsyntax.com/uploads/Rectangle 9299.svg',
+    'https://hubsyntax.com/uploads/Rectangle 9300.svg',
   ];
 
   const [current, setCurrent] = useState(0);
@@ -44,6 +51,7 @@ export default function App() {
           width: 100%;
           height: 100%;
           object-fit: cover;
+            border-radius: 10px;
         }
 
         .slide-center {
@@ -52,6 +60,7 @@ export default function App() {
           opacity: 1 !important;
           transform: scale(1.8);
           box-shadow: 0px 10px 90px 0px #0000004D;
+
         }
 
         .slide-other {
@@ -85,7 +94,7 @@ export default function App() {
         centeredSlides={true}
         loop={true}
         spaceBetween={10}
-        autoplay={false}
+        autoplay={true}
         speed={1000}
         onSlideChange={(swiper) => setCurrent(swiper.realIndex)}
         navigation={false}

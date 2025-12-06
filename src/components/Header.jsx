@@ -29,10 +29,10 @@ export default function Header() {
                                 </NavLink>
                             </li>
                             <li className="flex items-center hover:text-[#ff3e5e] cursor-pointer services-item">
-                                <NavLink to="" className={linkClass}>
+                                <NavLink to="/services" className={linkClass}>
                                     Services
                                 </NavLink>
-                                <img src='https://www.hubsyntax.com/uploads/Vector(3).svg' alt="Dropdown" className="w-auto" />
+                               
                             </li>
                             <li className="hover:text-[#ff3e5e] cursor-pointer">
                                 <NavLink to="" className={linkClass}>
@@ -94,10 +94,10 @@ export default function Header() {
                         </NavLink>
                     </li>
                     <li className="flex items-center hover:text-[#ff3e5e] cursor-pointer services-item">
-                        <NavLink to="" className={linkClass}>
+                        <NavLink to="/services" className={linkClass}>
                             Services
                         </NavLink>
-                        <img src='https://www.hubsyntax.com/uploads/Vector(3).svg' alt="Dropdown" className="w-auto" />
+                       
                     </li>
                     <li className="hover:text-[#ff3e5e] cursor-pointer">
                         <NavLink to="" className={linkClass}>

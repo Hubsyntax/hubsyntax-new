@@ -22,7 +22,7 @@ export default function ProtfolioSeo() {
     return (
         <div>
             <DriveButton text="Seo optimisation" />
-            <section className="bg-white  relative ">
+            <section className=" relative ">
                 <div className="poftfolio-slider-wrapp">
                     <BusinessGrowthSlider
                         slides={slidesData1}

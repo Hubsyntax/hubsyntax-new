@@ -22,8 +22,23 @@ export default function TrustWorld() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const brands = [ews, zero, bang, celina, bns, naked, shea, therich, ews, zero, naked, shea, therich, ews, zero];
-
+    const brands = [
+        'https://hubsyntax.com/uploads/Group 1597883170 (1).svg',
+        'https://hubsyntax.com/uploads/Group 1597883170.svg',
+        'https://hubsyntax.com/uploads/Group 1597883171 (1).svg',
+        'https://hubsyntax.com/uploads/Group 1597883171.svg',
+        'https://hubsyntax.com/uploads/Group 1597883172 (1).svg',
+        'https://hubsyntax.com/uploads/Group 1597883172.svg',
+        'https://hubsyntax.com/uploads/Group 1597883173 (1).svg',
+        'https://hubsyntax.com/uploads/Group 1597883173 (2).svg',
+        'https://hubsyntax.com/uploads/Group 1597883173.svg',
+        'https://hubsyntax.com/uploads/Group 1597883174 (1).svg',
+        'https://hubsyntax.com/uploads/Group 1597883173 (2).svg',
+        'https://hubsyntax.com/uploads/Group 1597883174.svg',
+        'https://hubsyntax.com/uploads/Group 1597883175.svg',
+        'https://hubsyntax.com/uploads/Group 1597883176.svg',
+        'https://hubsyntax.com/uploads/Group 1597883177.svg',
+    ]
     return (
         <section className='bg-white py-[150px] section-trust-world'>
             <div className="container">

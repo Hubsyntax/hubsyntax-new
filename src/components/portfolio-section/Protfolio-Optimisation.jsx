@@ -22,7 +22,7 @@ export default function ProtfolioOptimisation() {
     return (
         <div>
             <DriveButton text="Optimisation" />
-            <section className="bg-white  relative ">
+            <section className="  relative ">
                 <div className="poftfolio-slider-wrapp">
                     <BusinessGrowthSlider
                         slides={slidesData1}

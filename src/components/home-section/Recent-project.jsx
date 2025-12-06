@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import fum from '../../images/fum.png';
-import arror from '../../images/arror.png';
 import Button from "../Button";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import slide1 from '../../images/slide1.png';
 import slide2 from '../../images/slide2.png';
@@ -50,151 +52,182 @@ const slideText = [
     },
 ];
 
+
 export default function RecentProject() {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [scrollKey, setScrollKey] = useState(0);
-    const sliderRef = useRef(null);
+    const swiperRef = useRef(null);
 
     const slides = [
-        { main: slide1, secondary: slidee1, scrollMain: scroll1, scrollSecondary: scroll1 },
-        { main: slide2, secondary: slidee2, scrollMain: scroll2, scrollSecondary: scroll2 },
-        { main: slide3, secondary: slidee3, scrollMain: scroll3, scrollSecondary: scroll3 },
-        { main: slide1, secondary: slidee1, scrollMain: scroll1, scrollSecondary: scroll1 },
-        { main: slide2, secondary: slidee2, scrollMain: scroll2, scrollSecondary: scroll2 },
-        { main: slide3, secondary: slidee3, scrollMain: scroll3, scrollSecondary: scroll3 },
+        { main: 'https://hubsyntax.com/uploads/image 104.svg', secondary: 'https://hubsyntax.com/uploads/image 105.svg', scrollMain: 'https://hubsyntax.com/uploads/image 96.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 97.svg' },
+        { main: 'https://hubsyntax.com/uploads/image 106.svg', secondary: 'https://hubsyntax.com/uploads/image 107.svg', scrollMain: 'https://hubsyntax.com/uploads/image 98.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 99.svg' },
+        { main: 'https://hubsyntax.com/uploads/image 108.svg', secondary: 'https://hubsyntax.com/uploads/image 109.svg', scrollMain: 'https://hubsyntax.com/uploads/image 100.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 101.svg' },
+        { main: 'https://hubsyntax.com/uploads/image 110.svg', secondary: 'https://hubsyntax.com/uploads/image 111.svg', scrollMain: 'https://hubsyntax.com/uploads/image 112.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 113.svg' },
+        { main: 'https://hubsyntax.com/uploads/image 102.svg', secondary: 'https://hubsyntax.com/uploads/image 103.svg', scrollMain: 'https://hubsyntax.com/uploads/image 119.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 118.svg' },
     ];
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "0px",
-        autoplay: false,
-        beforeChange: (current, next) => setActiveIndex(next),
-
-    };
-
-    useEffect(() => {
-        setScrollKey(prev => prev + 1);
-    }, [activeIndex]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            if (sliderRef.current) sliderRef.current.slickNext();
+            if (swiperRef.current) {
+                swiperRef.current.slideNext();
+            }
         }, 10000);
+
         return () => clearTimeout(timer);
     }, [activeIndex]);
 
     return (
         <section className="bg-[#f3fbff] py-[150px] recent-project-section">
-            <div className="project-slider-wrapper-recent relative">
-                <div className='container'>
-                    <div className='flex items-center  gap-[70px] pb-[50px] wrapper-recent-project'>
+            <div className='container'>
+                <div className='flex items-center  gap-[70px] pb-[50px] wrapper-recent-project'>
 
-                        <p className='leading-[60px] max-w-[500px] text-[#FF3E5E] font-bold text-[50px] export-font'>
-                            Explore Our <span className='text-[#00293F] font-bold'>Recent Projects</span>
-                        </p>
+                    <p className='leading-[60px] max-w-[500px] text-[#FF3E5E] font-bold text-[50px] export-font'>
+                        Explore Our <span className='text-[#00293F] font-bold'>Recent Projects</span>
+                    </p>
 
-                        <div className="wapped-poject-text-wrapper">
-                            <div className='wapped-poject-text'>
-                                <img src={slideText[activeIndex].img} className="wapped-project-img" />
+                    <div className="wapped-poject-text-wrapper">
+                        <div className='wapped-poject-text'>
+                            <img src={slideText[activeIndex].img} className="wapped-project-img" />
 
-                                <p className='text-[#2C2C2C] font-normal py-[15px] wrapped-project-des'>
-                                    {slideText[activeIndex].title}
-                                </p>
+                            <p className='text-[#2C2C2C] font-normal py-[15px] wrapped-project-des'>
+                                {slideText[activeIndex].title}
+                            </p>
 
-                                <Button
-                                    text={slideText[activeIndex].button}
-                                    icon='https://hubsyntax.com/uploads/Vector(2).svg'
-                                    className="get-start btn-slider"
-                                />
-                            </div>
+                            <Button
+                                text={slideText[activeIndex].button}
+                                icon='https://hubsyntax.com/uploads/Vector(2).svg'
+                                className="get-start btn-slider"
+                            />
                         </div>
-
                     </div>
+
                 </div>
-                <Slider {...settings} ref={sliderRef}>
+            </div>
+            <div className="project-slider-wrapper-recent relative">
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    slidesPerView={2.3}
+                    centeredSlides={true}
+                    loop={true}
+                    speed={800}
+                    pagination={{ clickable: true }}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                            centeredSlides: true,
+                            spaceBetween: 0,
+                        },
+                        841: {
+                            slidesPerView: 2.3,
+                            centeredSlides: true,
+                        }
+                    }}
+                >
                     {slides.map((slide, index) => {
                         const isCenter = index === activeIndex;
-                        const isLeft =
-                            index === (activeIndex - 1 + slides.length) % slides.length;
-                        const isRight =
-                            index === (activeIndex + 1) % slides.length;
+                        const isLeft = index === (activeIndex - 1 + slides.length) % slides.length;
+                        const isRight = index === (activeIndex + 1) % slides.length;
 
                         return (
-                            <div
-                                className={`project-slide relative 
-                ${isCenter ? "center-slide" : ""} 
-                ${isLeft ? "left-slide" : ""} 
-                ${isRight ? "right-slide" : ""}
-            `}
-                                key={index}
-                            >
-                                <div className="project-imges flex justify-center gap-4 relative">
-                                    <div className="fist-img relative overflow-hidden">
-                                        <img src={slide.main} alt="" className="w-full h-auto" />
-                                        {isCenter && (
-                                            <img
-                                                key={`main-${scrollKey}-${index}`}
-                                                src={slide.scrollMain}
-                                                alt=""
-                                                className="scroll-img main-scroll"
-                                            />
-                                        )}
-                                    </div>
+                            <SwiperSlide key={index}>
+                                <div
+                                    className={`project-slide relative 
+                                        ${isCenter ? "center-slide" : ""} 
+                                        ${isLeft ? "left-slide" : ""} 
+                                        ${isRight ? "right-slide" : ""}
+                                    `}
+                                >
+                                    <div className="project-imges">
 
-                                    <div className="seconc-img relative overflow-hidden">
-                                        <img src={slide.secondary} alt="" className="w-full h-auto" />
-                                        {isCenter && (
-                                            <img
-                                                key={`secondary-${scrollKey}-${index}`}
-                                                src={slide.scrollSecondary}
-                                                alt=""
-                                                className="scroll-img secondary-scroll"
-                                            />
-                                        )}
+                                        <div className="fist-img relative overflow-hidden">
+                                            <img src={slide.main} alt="" className="w-full h-auto" />
+
+                                            {isCenter && (
+                                                <img src={slide.scrollMain} alt="" className="scroll-img-10" />
+                                            )}
+                                        </div>
+
+                                        <div className="seconc-img relative overflow-hidden">
+                                            <img src={slide.secondary} alt="" className="w-full h-auto" />
+
+                                            {isCenter && (
+                                                <img src={slide.scrollSecondary} alt="" className="scroll-img-3" />
+                                            )}
+                                        </div>
+
                                     </div>
                                 </div>
-                            </div>
+                            </SwiperSlide>
                         );
                     })}
-
-                </Slider>
+                </Swiper>
             </div>
 
             <style jsx>{`
-        .project-imges {
-          position: relative;
-        }
+                .project-slide {
+                    transition: transform 0.4s ease, opacity 0.4s ease;
+                    display: flex !important;
+                    justify-content: center;
+                    padding: 0 15px;
+                    box-sizing: border-box;
+                }
 
-        .scroll-img {
-          position: absolute;
-          pointer-events: none;
-        }
+                
+                .center-slide {
+                    transform: scale(1.3);
+                    z-index: 3;
+                }
 
-        .fist-img .main-scroll {
-          left: 50%;
-          transform: translateX(-50%);
-          top: 0%;
-          animation: scrollUp 10s linear forwards;
-        }
+                .left-slide,
+                .right-slide {
+                    transform: scale(0.7);
+                    z-index: 1;
+                }
 
-        .seconc-img .secondary-scroll {
-          left: 50%;
-          transform: translateX(-50%);
-          top: 0%;
-          animation: scrollUp 15s linear  forwards; 
-        }
+                .fist-img {
+               border-radius: 10px;
+                }
 
-        @keyframes scrollUp {
-          0% { top: 0%; opacity: 1; }
-          100% { top: -100%; opacity: 1; }
-        }
+               .seconc-img {
+                border-radius: 10px;
+                }
+                .scroll-img-10 {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    animation: scrollUp10 10s linear forwards;
+                }
 
-      `}</style>
+                .scroll-img-3 {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    animation: scrollUp3 15s linear forwards;
+                }
+
+                @keyframes scrollUp10 {
+                    0% { top: 0%; }
+                    100% { top: -100%; }
+                }
+
+                @keyframes scrollUp3 {
+                    0% { top: 0%; }
+                    100% { top: -100%; }
+                }
+
+                .center-slide .scroll-img-10,
+                .center-slide .scroll-img-3 {
+                    opacity: 1;
+                }
+
+                .left-slide img.scroll-img-10,
+                .right-slide img.scroll-img-10,
+                .left-slide img.scroll-img-3,
+                .right-slide img.scroll-img-3 {
+                    opacity: 0 !important;
+                }
+            `}</style>
         </section>
     );
 }

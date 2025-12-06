@@ -16,6 +16,14 @@ export default function DeliverSolution() {
         return () => window.removeEventListener("resize", checkWidth);
     }, []);
 
+
+    const hoveredImg = [
+        'https://hubsyntax.com/uploads/high-angle-hands-holding-paper (1).svg',
+        'https://hubsyntax.com/uploads/high-angle-hands-holding-paper (2).svg',
+        'https://hubsyntax.com/uploads/high-angle-hands-holding-paper (3).svg',
+        'https://hubsyntax.com/uploads/high-angle-hands-holding-paper.svg',
+    ];
+
     const services = [
         { title: "UI/UX Web Design", defaultImg: 'https://hubsyntax.com/uploads/Layer_1 (2).svg', activeImg: 'https://hubsyntax.com/uploads/Layer_1 (8).svg' },
         { title: "Web & App Development", defaultImg: 'https://hubsyntax.com/uploads/Layer_1 (3).svg', activeImg: 'https://hubsyntax.com/uploads/Layer_1 (9).svg' },
@@ -64,15 +72,22 @@ export default function DeliverSolution() {
                             </p>
                             <div className='flex items-center  devliver-content-desgin'>
                                 <p className='devliver-text text-[40px]  font-bold text-[#C6DDE8]'
-                                       style={{ color: isActive ? "#FF3E5E" : "#C6DDE8" }}>
+                                    style={{ color: isActive ? "#FF3E5E" : "#C6DDE8" }}>
                                     {service.title}
                                 </p>
 
-                                {(isDesktop || activeIndex === index) && (
+                                {/* {(isDesktop || activeIndex === index) && (
                                     <div className="devliver-hover-img">
                                         <img src={hoverImg} alt="" />
                                     </div>
+                                )} */}
+
+                                   {(isDesktop || isActive) && (
+                                    <div className="devliver-hover-img">
+                                        <img src={hoveredImg[index]} alt="hover"  className="w-[42%]"/>
+                                    </div>
                                 )}
+
 
                                 {(isDesktop || activeIndex === index) && (
                                     <div className='devliver-stats-desgin text-[#C6DDE8] leading-[28px] text-[15px] font-bold'
