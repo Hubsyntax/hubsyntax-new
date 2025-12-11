@@ -5,14 +5,14 @@ import Button from "../Button";
 
 const slidesData1 = [
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/Group (17).svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 178.svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 91 (1).svg",
   },
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/Vector (10).svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 87 (1).svg",
@@ -22,14 +22,14 @@ const slidesData1 = [
 
 const slidesData2 = [
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/Sofa- Direct.svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 88 (1).svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 93 (1).svg",
   },
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/250917_Opium_Logo_Porcelain_RGB 1.svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 89 (1).svg",
@@ -39,14 +39,14 @@ const slidesData2 = [
 
 const slidesData3 = [
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/slides1.svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 90 (1).svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 95 (1).svg",
   },
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/GARDPRO_2 1.svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 179.svg",
@@ -56,30 +56,31 @@ const slidesData3 = [
 
 const slidesData4 = [
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/Logo1 2.svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
-    mainImage: "https://www.hubsyntax.com/uploads/image 140.svg",
-    overlayImage: "https://www.hubsyntax.com/uploads/image 144.svg",
+    mainImage: "https://www.hubsyntax.com/uploads/image 271.svg",
+    overlayImage: "https://www.hubsyntax.com/uploads/image 272.svg",
   },
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/250918.svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
-    mainImage: "https://www.hubsyntax.com/uploads/image 148.svg",
-    overlayImage: "https://www.hubsyntax.com/uploads/image 152.svg",
+    mainImage: "https://www.hubsyntax.com/uploads/image 273.svg",
+    overlayImage: "https://www.hubsyntax.com/uploads/image 274.svg",
   },
 ];
+
 const slidesData5 = [
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/happy stuf logo yellow 3.svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 156.svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 160.svg",
   },
   {
-    logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+    logo: "https://www.hubsyntax.com/uploads/Vector (11).svg",
     buttonText: "View Live Project",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 164.svg",

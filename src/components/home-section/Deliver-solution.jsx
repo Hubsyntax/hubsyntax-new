@@ -34,14 +34,14 @@ export default function DeliverSolution() {
     ]
 
     return (
-        <section className='bg-[#ffffff] py-[150px] section-deliver-solution'>
+        <section className='bg-[#f3fbff] py-[150px] section-deliver-solution'>
             <div className="container">
                 <div className='flex '>
                     <p className='devliver-heading titles-services  pt-[50px]'><span className="devliver-service-text">Services</span></p>
                     <div className='flex items-center devliver-content ' >
                         <p className=' devliver-text solutions text-[60px]  font-bold text-[#00293F]'>
-                            <span className='text-[#FF3E5E] '>Solutions </span>
-                            That we Deliver
+                            <span className="text-[#FF3E5E] block">Solutions</span>
+                            <span className="block">That we Deliver</span>
                         </p>
                         <div className='devliver-stats'>
                             <p className='text-[45px]  font-bold text-[#00293F] leading-[60px]'>021 +</p>

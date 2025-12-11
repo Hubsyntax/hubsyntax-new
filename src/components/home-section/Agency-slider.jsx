@@ -38,9 +38,9 @@ export default function AgencySlider() {
         [
             'https://hubsyntax.com/uploads/unnamed (4).webp',
             'https://hubsyntax.com/uploads/Group 1597883452.svg',
-            'https://hubsyntax.com/uploads/Group 1597883436 (1).svg',
+            'https://hubsyntax.com/uploads/hills.svg',
             'https://hubsyntax.com/uploads/unnamed (3).webp',
-            'https://hubsyntax.com/uploads/Group 1597883442.svg'
+            'https://hubsyntax.com/uploads/Group 1597883442 (1).svg'
         ]
     ];
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import { Navigation, Autoplay } from "swiper/modules";
 
 export default function App() {
-  const SLIDES_VERSION = "v2"
+  const SLIDES_VERSION = "v2";
 
   const defaultSlides = [
     'https://hubsyntax.com/uploads/Group 1597883400 (3).svg',
@@ -22,29 +22,20 @@ export default function App() {
     'https://hubsyntax.com/uploads/Group 1597883410 (2).svg',
   ];
 
-  const [slides, setSlides] = useState([]);
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
+  const [slides, setSlides] = useState(() => {
     const storedVersion = localStorage.getItem("slides_version");
     const storedSlides = localStorage.getItem("slides");
 
-    if (storedVersion !== SLIDES_VERSION) {
-      localStorage.setItem("slides", JSON.stringify(defaultSlides));
-      localStorage.setItem("slides_version", SLIDES_VERSION);
-      setSlides(defaultSlides);
-    } else {
-      setSlides(JSON.parse(storedSlides) || defaultSlides);
+    if (storedVersion === SLIDES_VERSION && storedSlides) {
+      return JSON.parse(storedSlides);
     }
-  }, []);
 
-  useEffect(() => {
-    slides.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, [slides]);
+    localStorage.setItem("slides", JSON.stringify(defaultSlides));
+    localStorage.setItem("slides_version", SLIDES_VERSION);
+    return defaultSlides;
+  });
 
+  const [current, setCurrent] = useState(0);
   const n = slides.length;
 
   const breakpoints = {
@@ -65,7 +56,7 @@ export default function App() {
       <Swiper
         slidesPerView={7}
         centeredSlides={true}
-        loop={slides.length >= maxSlidesPerView} 
+        loop={slides.length >= maxSlidesPerView}
         spaceBetween={10}
         autoplay={{ delay: 2000 }}
         speed={1000}
@@ -76,7 +67,6 @@ export default function App() {
       >
         {slides.map((img, i) => {
           const wrapperClass = `slide-wrapper-${i + 1}`;
-          if (n === 0) return null;
 
           let dist = i - current;
           if (dist > n / 2) dist -= n;
@@ -93,7 +83,7 @@ export default function App() {
             <SwiperSlide key={i} className={wrapperClass} style={{ width: "auto" }}>
               <div className="flex justify-center px-[5px]">
                 <div className={className}>
-                  <img src={img} alt={`slide-${i}`}/>
+                  <img src={img} alt={`slide-${i}`} />
                 </div>
               </div>
             </SwiperSlide>

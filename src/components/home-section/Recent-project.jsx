@@ -50,7 +50,7 @@ export default function RecentProject() {
         { main: 'https://hubsyntax.com/uploads/image 104.svg', secondary: 'https://hubsyntax.com/uploads/image 105.svg', scrollMain: 'https://hubsyntax.com/uploads/image 96.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 97.svg' },
         { main: 'https://hubsyntax.com/uploads/image 106.svg', secondary: 'https://hubsyntax.com/uploads/image 107 (1).svg', scrollMain: 'https://hubsyntax.com/uploads/image 98.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 99.svg' },
         { main: 'https://hubsyntax.com/uploads/image 108.svg', secondary: 'https://hubsyntax.com/uploads/image 176.svg', scrollMain: 'https://hubsyntax.com/uploads/image 100.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 101.svg' },
-        { main: 'https://hubsyntax.com/uploads/image 185.svg', secondary: 'https://hubsyntax.com/uploads/image 187.svg', scrollMain: 'https://hubsyntax.com/uploads/image 186.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 187.svg' },
+        { main: 'https://hubsyntax.com/uploads/image 185.svg', secondary: 'https://hubsyntax.com/uploads/image 187.svg', scrollMain: 'https://hubsyntax.com/uploads/image 186.svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 188 (1).svg' },
         { main: 'https://hubsyntax.com/uploads/image 102 (1).svg', secondary: 'https://hubsyntax.com/uploads/image 103 (1).svg', scrollMain: 'https://hubsyntax.com/uploads/image 119 (1).svg', scrollSecondary: 'https://hubsyntax.com/uploads/image 118 (1).svg' },
     ];
 
@@ -113,43 +113,37 @@ export default function RecentProject() {
                         }
                     }}
                 >
-                    {slides.map((slide, index) => {
-                        const isCenter = index === activeIndex;
-                        const isLeft = index === (activeIndex - 1 + slides.length) % slides.length;
-                        const isRight = index === (activeIndex + 1) % slides.length;
-
-                        return (
-                            <SwiperSlide key={index}>
-                                <div
-                                    className={`project-slide relative 
-                                        ${isCenter ? "center-slide" : ""} 
-                                        ${isLeft ? "left-slide" : ""} 
-                                        ${isRight ? "right-slide" : ""}
-                                    `}
-                                >
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            {({ isActive, isPrev, isNext }) => (
+                                <div className={`
+                                project-slide 
+                                ${isActive ? "center-slide" : ""} 
+                                ${isPrev ? "left-slide" : ""} 
+                                ${isNext ? "right-slide" : ""}
+                                `}>
                                     <div className="project-imges">
 
                                         <div className="fist-img relative overflow-hidden">
                                             <img src={slide.main} alt="" className="w-full h-auto" />
-
-                                            {isCenter && (
+                                            {isActive && (
                                                 <img src={slide.scrollMain} alt="" className="scroll-img-10" />
                                             )}
                                         </div>
 
                                         <div className="seconc-img relative overflow-hidden">
                                             <img src={slide.secondary} alt="" className="w-full h-auto" />
-
-                                            {isCenter && (
+                                            {isActive && (
                                                 <img src={slide.scrollSecondary} alt="" className="scroll-img-3" />
                                             )}
                                         </div>
 
                                     </div>
                                 </div>
-                            </SwiperSlide>
-                        );
-                    })}
+                            )}
+                        </SwiperSlide>
+                    ))}
+
                 </Swiper>
             </div>
 
@@ -162,7 +156,6 @@ export default function RecentProject() {
                     box-sizing: border-box;
                 }
 
-                
                 .center-slide {
                     transform: scale(1.3);
                     z-index: 3;

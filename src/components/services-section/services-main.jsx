@@ -108,7 +108,6 @@ export default function ServicesMain() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-
     return (
         <section className="bg-white pt-[120px] pb-[150px] services-section-main ">
             <div className="container mx-auto scroll-section-mobile">

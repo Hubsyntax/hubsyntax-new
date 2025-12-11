@@ -51,6 +51,12 @@ body {
     max-width: 100%;
 }
 
+.flex-shrink-0.logo {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 .get-start {
     display: flex;
     background: #FF3E5E;
@@ -343,7 +349,7 @@ span.boost-item img {
 }
 
 .execution-des {
-    max-width: 86%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -395,7 +401,7 @@ span.boost-item img {
 }
 
 .execution-des-sales.boost {
-    max-width: 90%;
+    max-width: 1270px;
     margin: auto;
 }
 
@@ -467,7 +473,6 @@ p.devliver-heading {
 }
 
 p.devliver-text {
-    max-width: 47%;
     line-height: 60px;
 }
 
@@ -1177,11 +1182,8 @@ span.devliver-service-text {
 }
 
 @media screen and (max-width: 1024px) {
-    .clients-wrap.last{
+    .clients-wrap.last {
         border-right: 1px solid #BDC7CE;
-    }
-    p.devliver-text {
-        max-width: 100%;
     }
 
     .scroll-container-wrapping {
@@ -1358,7 +1360,6 @@ span.devliver-service-text {
     }
 
     p.devliver-text.solutions {
-        max-width: 40%;
         line-height: 40px;
         font-size: 40px;
     }
@@ -1406,7 +1407,7 @@ span.devliver-service-text {
     .descrition {
         font-size: 14px;
         margin: auto;
-        max-width: 90%;
+        max-width: 850px;
         padding-bottom: 20px;
     }
 
@@ -1456,7 +1457,6 @@ span.devliver-service-text {
     }
 
     .execution-des {
-        max-width: 98%;
         font-size: 14px;
     }
 
@@ -1493,7 +1493,7 @@ span.devliver-service-text {
     .title-project-sales {
         font-size: 40px;
         text-align: center;
-        max-width: 68%;
+        max-width: 800px;
         line-height: 40px;
         margin: auto;
     }
@@ -1559,7 +1559,7 @@ span.devliver-service-text {
     .export-font {
         font-size: 40px;
         line-height: 40px;
-        max-width: 44%;
+        max-width: 370px;
     }
 
     .wrapper-recent-project {
@@ -1572,7 +1572,6 @@ span.devliver-service-text {
 
     .clients-wrapping {
         font-size: 40px;
-        max-width: 86%;
         line-height: 40px;
     }
 
@@ -1624,7 +1623,7 @@ span.devliver-service-text {
     .ready-text {
         font-size: 60px;
         line-height: 65px;
-        max-width: 80%;
+        max-width: 840px;
         margin: auto;
         padding-bottom: 30px;
     }
@@ -1684,14 +1683,6 @@ span.devliver-service-text {
         left: -43px !important;
     }
 
-    .title-project-sales {
-        max-width: 72%;
-    }
-
-    .ready-text {
-        max-width: 90%;
-    }
-
     .project-slider-wrapper .slick-track {
         height: 475px;
     }
@@ -1707,13 +1698,14 @@ span.devliver-service-text {
 
 
 @media screen and (max-width: 840px) {
+    .heading-text h1 {
+        line-height: 65px;
+        font-size: 55px;
+    }
+
     .left-img-review {
         left: 1px;
         top: 41%;
-    }
-
-    .ready-text {
-        max-width: 100%;
     }
 
     .devliver-stats-desgin {
@@ -1734,7 +1726,7 @@ span.devliver-service-text {
     }
 
     .center-slide {
-        transform: scale(1);
+        transform: scale(1) !important;
         z-index: 3;
     }
 
@@ -1843,9 +1835,6 @@ span.devliver-service-text {
         width: 50%;
     }
 
-    .title-project-sales {
-        max-width: 82%;
-    }
 
     .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.w-full {
         padding: 0 0 40px 0;
@@ -1873,6 +1862,7 @@ span.devliver-service-text {
         width: 100%;
         max-width: 180px;
         margin: auto;
+        height: 100px;
     }
 
     .portfolio-slide-logo {
@@ -1889,11 +1879,19 @@ span.devliver-service-text {
     .project-slide.relative.center-slide {
         transform: unset;
     }
+
+    .title-project-sales {
+        max-width: 658px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
+    .wapped-poject-text-wrapper {
+        width: 55%;
+    }
+
     .ready-text {
-        max-width: 100%;
         font-size: 48px;
         line-height: 60px;
     }
@@ -1907,11 +1905,7 @@ span.devliver-service-text {
     }
 
     .heading-text h1 {
-        font-size: 55px;
-    }
-
-    .execution-des-sales.boost {
-        max-width: 100%;
+        font-size: 50px;
     }
 
     .row-slider.slider-0.scroll-down {
@@ -1994,12 +1988,7 @@ span.devliver-service-text {
     }
 
     p.devliver-text {
-        max-width: 100%;
         line-height: 60px;
-    }
-
-    p.devliver-text.solutions {
-        max-width: 50%;
     }
 
     p.devliver-heading {
@@ -2042,7 +2031,7 @@ span.devliver-service-text {
 
     .clients-wrapping {
         font-size: 40px;
-        max-width: 80%;
+        max-width: 590px;
         margin: auto;
     }
 
@@ -2054,12 +2043,15 @@ span.devliver-service-text {
     .slider-slide-container .swiper-button-prev {
         left: 89% !important;
     }
-}
-
-@media screen and (max-width:640px) {
 
     .client-side-review-slides-mobile {
         padding: 0 0 50px 0 !important;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .wapped-poject-text-wrapper {
+        width: 100%;
     }
 
     .portfolio-h1 {
@@ -2107,16 +2099,8 @@ span.devliver-service-text {
         font-size: 43px;
     }
 
-    .descrition {
-        max-width: 100%;
-    }
-
     .scales-business.relative {
         padding: 40px 0 0px;
-    }
-
-    p.devliver-text.solutions {
-        max-width: 65%;
     }
 
     .section-deliver-solution {
@@ -2213,7 +2197,7 @@ span.devliver-service-text {
     }
 
     .export-font {
-        max-width: 100%;
+        margin: auto;
     }
 
     .brand-img {
@@ -2302,8 +2286,12 @@ span.devliver-service-text {
 }
 
 @media screen and (max-width: 540px) {
+    .heading-text h1 {
+        line-height: 45px;
+        font-size: 35px;
+    }
+
     .ready-text {
-        max-width: 100%;
         font-size: 38px;
         line-height: 55px;
     }
@@ -2312,7 +2300,7 @@ span.devliver-service-text {
         display: none !important;
     }
 
-    .row-slider.slider-4.scroll-down {
+    .row-slider.slider-5.scroll-up {
         display: none !important;
     }
 
@@ -2388,16 +2376,13 @@ span.devliver-service-text {
         width: 100%;
     }
 
-    .slider-slide-container .swiper-button-prev {
-        top: 80% !important;
-    }
-
     .slider-slide-container .swiper-button-next {
         top: 80% !important;
     }
 
     .slider-slide-container .swiper-button-prev {
         left: 83% !important;
+        top: 80% !important;
     }
 
     .mobile-img img {
@@ -2495,13 +2480,12 @@ span.devliver-service-text {
         font-size: 30px;
     }
 
-
     .slider-slide-container .swiper-button-prev {
-        top: 75% !important;
+        top: 70% !important;
     }
 
     .slider-slide-container .swiper-button-next {
-        top: 75% !important;
+        top: 70% !important;
     }
 
     .slider-slide-container .swiper-pagination {
@@ -2540,13 +2524,11 @@ span.devliver-service-text {
     }
 
     .devliver-content {
-        gap: 25px;
-        display: grid;
+        display: block;
         padding-bottom: 40px;
     }
 
     p.devliver-text.solutions {
-        max-width: 77%;
         font-size: 28px;
         line-height: 35px;
     }
@@ -2586,7 +2568,6 @@ span.devliver-service-text {
     }
 
     .execution-des {
-        max-width: 100%;
         font-size: 12px;
     }
 
@@ -2603,7 +2584,6 @@ span.devliver-service-text {
     }
 
     .title-project-sales {
-        max-width: 100%;
         font-size: 28px;
         line-height: 35px;
     }
@@ -2631,7 +2611,7 @@ span.devliver-service-text {
     }
 
     .export-font {
-        max-width: 100%;
+        max-width: 300px;
         font-size: 28px;
         line-height: 35px;
     }
@@ -2650,7 +2630,7 @@ span.devliver-service-text {
 
     .clients-wrapping {
         font-size: 28px;
-        max-width: 90%;
+        max-width: 400px;
         margin: auto;
         line-height: 35px;
     }
@@ -2658,7 +2638,7 @@ span.devliver-service-text {
     .ready-text {
         font-size: 28px;
         line-height: 35px;
-        max-width: 95%;
+        max-width: 400px;
     }
 
     .project-approch {
@@ -2671,8 +2651,16 @@ span.devliver-service-text {
 }
 
 @media screen and (max-width:430px) {
+    .slides-portfolio {
+        gap: 100px;
+    }
+
+    .slider-slide-container .swiper-pagination {
+        bottom: 170px !important;
+    }
+
     .logos-wrap {
-        max-width: 250px;
+        max-width: 260px;
     }
 
     .scroll-container-wrapping {
@@ -2708,12 +2696,7 @@ span.devliver-service-text {
     }
 }
 
-
 @media screen and (max-width:395px) {
-    .ready-text {
-        max-width: 100%;
-    }
-
     .row-slider {
         width: 47%;
     }
@@ -2724,18 +2707,6 @@ span.devliver-service-text {
 
     .mobile-img img {
         width: 95px;
-    }
-
-    .slider-slide-container .swiper-button-prev {
-        left: 78% !important;
-    }
-
-    .slider-slide-container .swiper-button-prev {
-        top: 71% !important;
-    }
-
-    .slider-slide-container .swiper-button-next {
-        top: 71% !important;
     }
 
     .slider-slide-container .swiper-pagination {
@@ -2760,10 +2731,6 @@ span.devliver-service-text {
 
     .section-deliver-solution {
         padding: 40px 0;
-    }
-
-    p.devliver-text.solutions {
-        max-width: 100%;
     }
 
     .section-kick-project {
@@ -2797,14 +2764,13 @@ span.devliver-service-text {
     .ready-section {
         padding: 40px 0 0;
     }
-
-    .clients-wrapping {
-        max-width: 100%;
-    }
 }
 
-
 @media screen and (max-width:375px) {
+    .logo-portfolio {
+        height: 80px;
+    }
+
     .mobile-img img {
         width: 83px;
     }
@@ -2812,16 +2778,9 @@ span.devliver-service-text {
     .slider-slide-container .swiper-button-next {
         top: 70% !important;
     }
-
-    .slider-slide-container .swiper-button-prev {
-        top: 70% !important;
-    }
-
-
 }
 
 @media screen and (max-width:345px) {
-
     .img-slider .swiper {
         padding: 106px 0 100px !important;
     }
@@ -2840,12 +2799,12 @@ span.devliver-service-text {
     }
 
     .slider-slide-container .swiper-button-next {
-        top: 68% !important;
+        top: 67% !important;
     }
 
     .slider-slide-container .swiper-button-prev {
         left: 73% !important;
-        top: 68% !important;
+        top: 67% !important;
     }
 
     .devliver-stats-desgin {
@@ -2863,32 +2822,36 @@ span.devliver-service-text {
 }
 
 @keyframes headingAnim {
-  0% {
-    opacity: 0;
-    transform: translateY(100px) scale(1);
-  }
-  40% {
-    opacity: 1;
-    transform: translateY(-10px) scale(1);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-  80% {
-    opacity: 1;
-    transform: translateY(0px) scale(1.3);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(1);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(0px) scale(1.3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
 .animate-heading {
-  animation: headingAnim 1.6s ease-out forwards;
+    animation: headingAnim 1.6s ease-out forwards;
 }
 
 .client-side-review.wrapp-slider-review {
-  pointer-events: none;
+    pointer-events: none;
 }

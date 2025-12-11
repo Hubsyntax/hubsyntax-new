@@ -5,12 +5,12 @@ export default function ScaleBussiness() {
         <section className='bg-[#fff5f7] pt-[158px] ready-section'>
             <div className="container scaleBussiness-wrapper">
                 <p className='text-[104px]  text-center leading-[115px] pb-[50px] ready-text'>
-                    <span className=' text-[#00293F] font-bold'>HubSyntax is ready to </span>
-                    <span className='  text-[#FF3E5E] font-bold business'>Scale Your Business</span>
+                    <span className='text-[#00293F] font-bold'>HubSyntax is ready to </span>
+                    <span className='text-[#FF3E5E] font-bold business'>Scale Your Business</span>
                 </p>
-
+                
                 <Button
-                    text=" Get in Touch"
+                    text="Get in Touch"
                     icon='https://hubsyntax.com/uploads/Vector(2).svg'
                     className="get-start let-go touch"
                 />
@@ -44,8 +44,6 @@ export default function ScaleBussiness() {
                     <img src='https://hubsyntax.com/uploads/Group 1597883418 (2).svg' alt="" />
                 </span>
             </div>
-
-
         </section>
     )
 }

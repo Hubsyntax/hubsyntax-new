@@ -5,14 +5,14 @@ import Button from "../Button";
 
 const slidesData1 = [
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/attachment 1.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 60.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 65.svg",
     },
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/GARDPRO_2-2 1.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 61.svg",
@@ -22,14 +22,14 @@ const slidesData1 = [
 
 const slidesData2 = [
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/Group 1597883456.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 62.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 84.svg",
     },
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/happy stuf logo yellow 4.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 63.svg",
@@ -39,14 +39,14 @@ const slidesData2 = [
 
 const slidesData3 = [
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/LOGO LUNEE 3.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 90 (1).svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 95 (1).svg",
     },
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/DESIGNED_BY_Kim_Zamorano.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 121.svg",
@@ -56,14 +56,14 @@ const slidesData3 = [
 
 const slidesData4 = [
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/LR_Transparent_Logo 2.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 170.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 171.svg",
     },
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/1.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 172.svg",
@@ -73,14 +73,14 @@ const slidesData4 = [
 
 const slidesData5 = [
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/FLOWN_OAK_-_LOGO_ 2.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 174.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 175.svg",
     },
     {
-        logo: "https://www.hubsyntax.com/uploads/FUM_LogoTagline_v3 1.svg",
+        logo: "https://www.hubsyntax.com/uploads/attachment 2.svg",
         buttonText: "View Live Project",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 139.svg",
