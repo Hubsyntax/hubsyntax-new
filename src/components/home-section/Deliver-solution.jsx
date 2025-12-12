@@ -53,7 +53,6 @@ export default function DeliverSolution() {
                         </div>
                     </div>
                 </div>
-
                 {services.map((service, index) => {
                     const isActive = activeIndex === index;
 
@@ -78,18 +77,11 @@ export default function DeliverSolution() {
                                     {service.title}
                                 </p>
 
-                                {/* {(isDesktop || activeIndex === index) && (
-                                    <div className="devliver-hover-img">
-                                        <img src={hoverImg} alt="" />
-                                    </div>
-                                )} */}
-
                                 {(isDesktop || isActive) && (
                                     <div className="devliver-hover-img">
                                         <img src={hoveredImg[index]} alt="hover" className="w-[42%]" />
                                     </div>
                                 )}
-
 
                                 {(isDesktop || activeIndex === index) && (
                                     <div
@@ -131,13 +123,11 @@ export default function DeliverSolution() {
                                             ))}
                                         </div>
                                     </div>
-
                                 )}
                             </div>
                         </div>
                     );
                 })}
-
             </div>
         </section>
     );

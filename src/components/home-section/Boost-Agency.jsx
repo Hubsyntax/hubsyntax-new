@@ -86,7 +86,7 @@ export default function BoostAgency() {
                         <Swiper
                             modules={[Autoplay]}
                             slidesPerView={2}
-                          
+
                             autoplay={{ delay: 2000 }}
                             loop={true}
                         >
@@ -101,49 +101,15 @@ export default function BoostAgency() {
                         </Swiper>
                     </div>
                 ) : (
-                    <div className='clients boost-agency py-[60px]'>
-                        <div className='clients-wrap'>
-                            <span className='client-no text-[50px] text-[#FF3E5E] font-bold agency'>
-                                <Counter target="30%" start={inView} />
-                            </span>
-                            <span className='text-[14px] text-[#2C2C2C] boost'>Reduction in Cart Abandonment</span>
-                        </div>
-
-                        <div className='clients-wrap'>
-                            <span className='client-no text-[50px] text-[#FF3E5E] font-bold agency'>
-                                <Counter target="60%" start={inView} />
-                            </span>
-                            <span className='text-[14px] text-[#2C2C2C] boost'>Improve Conversion Rates</span>
-                        </div>
-
-                        <div className='clients-wrap'>
-                            <span className='client-no text-[50px] text-[#FF3E5E] font-bold agency'>
-                                <Counter target="6k" start={inView} />
-                            </span>
-                            <span className='text-[14px] text-[#2C2C2C] boost'>Higher Engagement</span>
-                        </div>
-
-                        <div className='clients-wrap'>
-                            <span className='client-no text-[50px] text-[#FF3E5E] font-bold agency'>
-                                <Counter target="30%" start={inView} />
-                            </span>
-                            <span className='text-[14px] text-[#2C2C2C] boost'>Customer Returning Rate</span>
-                        </div>
-
-                        <div className='clients-wrap'>
-                            <span className='client-no text-[50px] text-[#FF3E5E] font-bold agency'>
-                                <Counter target="4k" start={inView} />
-                            </span>
-                            <span className='text-[14px] text-[#2C2C2C] boost'>Faster time-to-checkout</span>
-                        </div>
-
-                        <div className='clients-wrap last'>
-                            <span className='client-no text-[50px] text-[#FF3E5E] font-bold agency'>
-                                <Counter target="200+" start={inView} />
-                            </span>
-                            <span className='text-[14px] text-[#2C2C2C] boost'>A/B tests conducted</span>
-                        </div>
-
+                    <div className="clients boost-agency py-[60px]">
+                        {clientsData.map((item, index) => (
+                            <div className={`clients-wrap ${index === clientsData.length - 1 ? "last" : ""}`} key={index}>
+                                <span className="client-no text-[50px] text-[#FF3E5E] font-bold agency">
+                                    <Counter target={item.target} start={inView} />
+                                </span>
+                                <span className="text-[14px] text-[#2C2C2C] boost">{item.label}</span>
+                            </div>
+                        ))}
                     </div>
                 )}
             </div>

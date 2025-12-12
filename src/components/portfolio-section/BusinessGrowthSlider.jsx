@@ -41,17 +41,19 @@ export default function BusinessGrowthSlider({ slides, topImage, bottomImage, in
                         className="w-[248px] max-w-[100%] pb-[30px] logo-portfolio"
                       />
                       <div className="get-btn portfolio">
-                        <Button
-                          text={slide.buttonText}
-                          icon={slide.buttonIcon}
-                          className="get-start"
-                        />
+                        <a href={slide.buttonLink} target="_blank" rel="noopener noreferrer">
+                          <Button
+                            text={slide.buttonText}
+                            icon={slide.buttonIcon}
+                            className="get-start"
+                          />
+                        </a>
                       </div>
                     </div>
 
                     <div className="relative w-[78%] portfolio-slide-img">
                       <div className="main-img-slide">
-                        <img src={slide.mainImage} alt="" loading="lazy"/>
+                        <img src={slide.mainImage} alt="" loading="lazy" />
                       </div>
                       {slide.overlayImage && (
                         <div className="absolute top-[225px] left-[-70px] mobile-img">

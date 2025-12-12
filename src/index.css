@@ -41,8 +41,10 @@ body {
     display: inline-flex;
 }
 
-.services-item {
-    gap: 4px;
+.navbar-wrap {
+    background-image: url(https://hubsyntax.com/uploads/Element.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .heading-text {
@@ -112,8 +114,13 @@ span.client-no {
 
 .logos-wrap {
     width: 100%;
-    max-width: 390px;
+    max-width: 438px;
     margin: auto;
+}
+
+.logos-section {
+    width: 100%;
+    height: 100%;
 }
 
 .footer-logs {
@@ -1182,6 +1189,10 @@ span.devliver-service-text {
 }
 
 @media screen and (max-width: 1024px) {
+    .scales-business {
+        padding: 70px 0 0;
+    }
+
     .clients-wrap.last {
         border-right: 1px solid #BDC7CE;
     }
@@ -1323,11 +1334,6 @@ span.devliver-service-text {
         padding: 40px 0 0px;
     }
 
-    .logos-section {
-        width: 45px;
-        height: 45px;
-    }
-
     .flex-shrink-0.logo img {
         width: 138px;
     }
@@ -1413,7 +1419,6 @@ span.devliver-service-text {
 
     .logos-wrap {
         padding-bottom: 20px;
-        gap: 30px;
     }
 
     p.devliver-heading.titles-services {
@@ -1946,7 +1951,6 @@ span.devliver-service-text {
 
     .client-img .swiper-slide {
         padding: 0 !important;
-        padding-right: 20px !important;
     }
 
     .client-review .swiper-pagination {
@@ -2047,9 +2051,18 @@ span.devliver-service-text {
     .client-side-review-slides-mobile {
         padding: 0 0 50px 0 !important;
     }
+
+    .navbar-wrap {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width:640px) {
+
+    .scales-business {
+        padding: 60px 0 0;
+    }
+
     .wapped-poject-text-wrapper {
         width: 100%;
     }
@@ -2432,9 +2445,14 @@ span.devliver-service-text {
     .project-slider-wrapper .slick-slide.slick-active.slick-center.slick-current {
         width: 640px !important;
     }
+
 }
 
 @media screen and (max-width: 480px) {
+    .project-approch-img img {
+        width: 42px;
+    }
+
     .whatsapp-icon {
         width: 20px;
     }
@@ -2449,12 +2467,9 @@ span.devliver-service-text {
     }
 
     .logos-wrap {
-        max-width: 345px;
+        max-width: 268px;
     }
 
-    .logos-wrap .swiper-slide {
-        width: 100px !important;
-    }
 
     .ready-text span.business {
         font-weight: 700;
@@ -2489,7 +2504,7 @@ span.devliver-service-text {
     }
 
     .slider-slide-container .swiper-pagination {
-        bottom: 170px !important;
+        bottom: 200px !important;
     }
 
     .mobile-img {
@@ -2647,6 +2662,15 @@ span.devliver-service-text {
 
     .project-approch-img {
         border-radius: 10px;
+        padding: 10px;
+    }
+
+    .project-approch::after {
+        left: 28px;
+    }
+
+    .project-approch::before {
+        left: 28px;
     }
 }
 
@@ -2657,10 +2681,6 @@ span.devliver-service-text {
 
     .slider-slide-container .swiper-pagination {
         bottom: 170px !important;
-    }
-
-    .logos-wrap {
-        max-width: 260px;
     }
 
     .scroll-container-wrapping {
@@ -2697,6 +2717,10 @@ span.devliver-service-text {
 }
 
 @media screen and (max-width:395px) {
+    .scales-business {
+        padding: 40px 0 0;
+    }
+
     .row-slider {
         width: 47%;
     }
@@ -2767,6 +2791,10 @@ span.devliver-service-text {
 }
 
 @media screen and (max-width:375px) {
+    .logos-wrap {
+        max-width: 208px;
+    }
+
     .logo-portfolio {
         height: 80px;
     }
@@ -2819,37 +2847,6 @@ span.devliver-service-text {
     overflow: hidden;
     flex-direction: unset;
     gap: 0;
-}
-
-@keyframes headingAnim {
-    0% {
-        opacity: 0;
-        transform: translateY(100px) scale(1);
-    }
-
-    40% {
-        opacity: 1;
-        transform: translateY(-10px) scale(1);
-    }
-
-    60% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-    }
-
-    80% {
-        opacity: 1;
-        transform: translateY(0px) scale(1.3);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-    }
-}
-
-.animate-heading {
-    animation: headingAnim 1.6s ease-out forwards;
 }
 
 .client-side-review.wrapp-slider-review {

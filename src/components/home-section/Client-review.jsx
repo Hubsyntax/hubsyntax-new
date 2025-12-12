@@ -8,6 +8,52 @@ import Union3 from '../../images/Union.png';
 import Avatar from '../../images/Avatar.png';
 import star from '../../images/star.png';
 
+const clientReview = [
+    {
+        text: "Hubsyntax did an excellent job on my website's speed and performance improvements. I strongly recommend for impressive competence. Quality work, always delivered on time.",
+        name: "James Smith"
+    },
+    {
+        text: "Hubsyntax was highly professional and made all requested changes promptly and accurately. Their attention to detail and commitment to quality work were impressive. I’m very satisfied with the outcome and will definitely return.",
+        name: "James Smith"
+    },
+    {
+        text: "Hubsyntax did an excellent job on my website's speed and performance improvements. I strongly recommend for impressive competence. Quality work, always delivered on time.",
+        name: "James Smith"
+    },
+    {
+        text: "Hubsyntax was highly professional and made all requested changes promptly and accurately. Their attention to detail and commitment to quality work were impressive. Highly recommended.",
+        name: "James Smith"
+    }
+]
+
+const reviews = [
+    {
+        text: `Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out...`,
+        name: "James smith",
+        img: Avatar,
+        star: star,
+    },
+    {
+        text: `Hubsyntax did an excellent job on my website's speed and performance improvements. I strongly recommend for impressive competence...`,
+        name: "James smith",
+        img: Avatar,
+        star: star,
+    },
+    {
+        text: `Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out...`,
+        name: "James smith",
+        img: Avatar,
+        star: star,
+    },
+    {
+        text: `Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out...`,
+        name: "James smith",
+        img: Avatar,
+        star: star,
+    }
+];
+
 export default function ClientReview() {
 
     return (
@@ -36,246 +82,105 @@ export default function ClientReview() {
                             modules={[Autoplay]}
                             autoplay={{ delay: 0, disableOnInteraction: false }}
                             speed={3500}
-                            slidesPerView={'auto'}
+                            slidesPerView="auto"
                             loop={true}
                             allowTouchMove={true}
                             autoHeight={true}
                             mousewheel={false}
                             className="client-side-review wrapp-slider-review overflow-hidden"
                         >
-                            <div className='client-side-review'>
-                                <SwiperSlide>
+                            {clientReview.map((review, index) => (
+                                <SwiperSlide key={index}>
                                     <div className="w-full client-review-wrapping">
                                         <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax did an excellent job on my website's speed and performance improvements. I strongly recommend for impressive competence. Quality work, always delivered on time.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
+                                        <p className="py-[20px] prompt">{review.text}</p>
+
+                                        <div className="flex items-center gap-[15px]">
+                                            <img src={Avatar} alt="" className="img-author" />
                                             <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
+                                                <p className="text-[#00293F] font-medium text-[18px] pb-[5px] author-name">
+                                                    {review.name}
+                                                </p>
                                                 <img src={star} alt="" />
                                             </span>
                                         </div>
                                     </div>
                                 </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was highly professional and made all requested changes promptly and accurately. Their attention to detail and commitment to quality work were impressive. I’m very satisfied with the outcome and will definitely return to them for any future work on my site. I wouldn’t hesitate to use their services again and strongly recommend Hubsyntax to anyone seeking reliable and skilled website support.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax did an excellent job on my website's speed and performance improvements. I strongly recommend for impressive competence. Quality work, always delivered on time.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was highly professional and made all requested changes promptly and accurately. Their attention to detail and commitment to quality work were impressive. I’m very satisfied with the outcome and will definitely return to them for any future work on my site. I wouldn’t hesitate to use their services again and strongly recommend Hubsyntax to anyone seeking reliable and skilled website support.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            </div>
+                            ))}
                         </Swiper>
+
                         <Swiper
                             direction="vertical"
                             modules={[Autoplay]}
-                            autoplay={{
-                                delay: 0,
-                                disableOnInteraction: false,
-                                reverseDirection: true,
-                            }}
+                            autoplay={{ delay: 0, disableOnInteraction: false, reverseDirection: true }}
                             speed={3500}
-                            slidesPerView={'auto'}
+                            slidesPerView="auto"
                             loop={true}
                             allowTouchMove={true}
                             autoHeight={true}
                             mousewheel={false}
                             className="client-side-review wrapp-slider-review overflow-hidden"
                         >
+                            {reviews.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="w-full client-review-wrapping">
+                                        <img src={Union3} alt="" />
 
-                            <div className='client-side-review'>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out, and I’m very pleased with the results. I’ll definitely be working with Hubsyntax again for any future updates or improvements to my site. I highly recommend their services to anyone in need of reliable and skilled web development support. A trusted partner you can count on.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax did an excellent job on my website's speed and performance improvements. I strongly recommend for impressive competence. Quality work, always delivered on time.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out, and I’m very pleased with the results. I’ll definitely be working with Hubsyntax again for any future updates or improvements to my site. I highly recommend their services to anyone in need of reliable and skilled web development support. A trusted partner you can count on.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out, and I’m very pleased with the results. I’ll definitely be working with Hubsyntax again for any future updates or improvements to my site. I highly recommend their services to anyone in need of reliable and skilled web development support. A trusted partner you can count on.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
+                                        <p className="py-[20px] prompt">{item.text}</p>
 
-                            </div>
+                                        <div className="flex items-center gap-[15px]">
+                                            <img src={item.img} alt="" className="img-author" />
+                                            <span>
+                                                <p className="text-[#00293F] font-medium text-[18px] pb-[5px] author-name">
+                                                    {item.name}
+                                                </p>
+                                                <img src={item.star} alt="" />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
                         </Swiper>
 
                         <Swiper
                             direction="horizontal"
                             modules={[Autoplay, Pagination]}
-                            autoplay={true}
+                            autoplay={{ delay: 2000 }}
                             speed={1200}
+                            spaceBetween={20}
                             slidesPerView={2}
                             loop={true}
                             allowTouchMove={true}
                             autoHeight={true}
                             pagination={{ clickable: true }}
                             breakpoints={{
-                                0: {
-                                    slidesPerView: 1,
-                                },
-                                768: {
-                                    slidesPerView: 2,
-                                },
+                                0: { slidesPerView: 1 },
+                                768: { slidesPerView: 2 },
                             }}
                             className="client-side-review-slides-mobile overflow-hidden"
                         >
-                            <div className='client-side-review'>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
+                            {reviews.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="w-full client-review-wrapping">
                                         <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out, and I’m very pleased with the results. I’ll definitely be working with Hubsyntax again for any future updates or improvements to my site. I highly recommend their services to anyone in need of reliable and skilled web development support. A trusted partner you can count on.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax did an excellent job on my website's speed and performance improvements. I strongly recommend for impressive competence. Quality work, always delivered on time.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out, and I’m very pleased with the results. I’ll definitely be working with Hubsyntax again for any future updates or improvements to my site. I highly recommend their services to anyone in need of reliable and skilled web development support. A trusted partner you can count on.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="w-full  client-review-wrapping">
-                                        <img src={Union3} alt="" />
-                                        <p className='py-[20px] prompt'>
-                                            Hubsyntax was extremely professional and responsive, handling all requested amendments efficiently. Their commitment to delivering quality work stood out, and I’m very pleased with the results. I’ll definitely be working with Hubsyntax again for any future updates or improvements to my site. I highly recommend their services to anyone in need of reliable and skilled web development support. A trusted partner you can count on.
-                                        </p>
-                                        <div className='flex items-center gap-[15px]'>
-                                            <img src={Avatar} alt="" className='img-author' />
-                                            <span>
-                                                <p className='text-[#00293F] font-medium text-[18px] pb-[5px] author-name'>James smith</p>
-                                                <img src={star} alt="" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
 
-                            </div>
+                                        <p className="py-[20px] prompt">{item.text}</p>
+
+                                        <div className="flex items-center gap-[15px]">
+                                            <img src={item.img} alt="" className="img-author" />
+                                            <span>
+                                                <p className="text-[#00293F] font-medium text-[18px] pb-[5px] author-name">
+                                                    {item.name}
+                                                </p>
+                                                <img src={item.star} alt="" />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
                         </Swiper>
                     </div>
-
                 </div>
-
             </div>
         </section >
     )

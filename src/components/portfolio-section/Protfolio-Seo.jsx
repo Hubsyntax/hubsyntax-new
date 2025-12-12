@@ -7,6 +7,7 @@ const slidesData1 = [
     {
         logo: "https://www.hubsyntax.com/uploads/attachment 1.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://penthousepaws.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 60.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 65.svg",
@@ -14,6 +15,7 @@ const slidesData1 = [
     {
         logo: "https://www.hubsyntax.com/uploads/GARDPRO_2-2 1.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://www.gardpro.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 61.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 66.svg",
@@ -24,6 +26,7 @@ const slidesData2 = [
     {
         logo: "https://www.hubsyntax.com/uploads/Group 1597883456.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://www.naturemary.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 62.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 84.svg",
@@ -31,6 +34,7 @@ const slidesData2 = [
     {
         logo: "https://www.hubsyntax.com/uploads/happy stuf logo yellow 4.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://www.pregamegummy.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 63.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 68.svg",
@@ -41,6 +45,7 @@ const slidesData3 = [
     {
         logo: "https://www.hubsyntax.com/uploads/LOGO LUNEE 3.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://xn--lune-dpa.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 90 (1).svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 95 (1).svg",
@@ -48,6 +53,7 @@ const slidesData3 = [
     {
         logo: "https://www.hubsyntax.com/uploads/DESIGNED_BY_Kim_Zamorano.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://haneeaprons.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 121.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 125.svg",
@@ -58,6 +64,7 @@ const slidesData4 = [
     {
         logo: "https://www.hubsyntax.com/uploads/LR_Transparent_Logo 2.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://www.lucarenee.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 170.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 171.svg",
@@ -65,6 +72,7 @@ const slidesData4 = [
     {
         logo: "https://www.hubsyntax.com/uploads/1.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://www.doinkrollerz.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 172.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 173.svg",
@@ -75,6 +83,7 @@ const slidesData5 = [
     {
         logo: "https://www.hubsyntax.com/uploads/FLOWN_OAK_-_LOGO_ 2.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://www.flownoak.com.au/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 174.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 175.svg",
@@ -82,6 +91,7 @@ const slidesData5 = [
     {
         logo: "https://www.hubsyntax.com/uploads/attachment 2.svg",
         buttonText: "View Live Project",
+        buttonLink: "https://penthousepaws.com/",
         buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
         mainImage: "https://www.hubsyntax.com/uploads/image 139.svg",
         overlayImage: "https://www.hubsyntax.com/uploads/image 143.svg",
@@ -119,7 +129,7 @@ export default function ProtfolioSeo() {
                 </div>
             </section>
             {allSliders.length > 5 && (
-               <div className="get-btn mt-[30px]">
+                <div className="get-btn mt-[30px]">
                     <Button
                         onClick={() => setShowAll(!showAll)}
                         className="get-start"
