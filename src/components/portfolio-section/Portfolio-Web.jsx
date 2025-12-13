@@ -1,5 +1,5 @@
 import BusinessGrowthSlider from "./BusinessGrowthSlider";
-import DriveButton from "./Drive-Button"
+import DriveButton from "./Drive-Button";
 import { useState, useEffect } from "react";
 import Button from "../Button";
 
@@ -15,7 +15,7 @@ const slidesData1 = [
   {
     logo: "https://www.hubsyntax.com/uploads/Vector (10).svg",
     buttonText: "View Live Project",
-     buttonLink: "https://smash.com/",
+    buttonLink: "https://smash.com/",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 87 (1).svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 92 (1).svg",
@@ -34,7 +34,7 @@ const slidesData2 = [
   {
     logo: "https://www.hubsyntax.com/uploads/250917_Opium_Logo_Porcelain_RGB 1.svg",
     buttonText: "View Live Project",
-     buttonLink: "https://opiumfloral.com.au/",
+    buttonLink: "https://opiumfloral.com.au/",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 89 (1).svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 94 (1).svg",
@@ -45,7 +45,7 @@ const slidesData3 = [
   {
     logo: "https://www.hubsyntax.com/uploads/slides1.svg",
     buttonText: "View Live Project",
-     buttonLink: "https://xn--lune-dpa.com/pages/landing-page-3",
+    buttonLink: "https://xn--lune-dpa.com/pages/landing-page-3",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 90 (1).svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 95 (1).svg",
@@ -53,7 +53,7 @@ const slidesData3 = [
   {
     logo: "https://www.hubsyntax.com/uploads/GARDPRO_2 1.svg",
     buttonText: "View Live Project",
-     buttonLink: "https://www.gardpro.com/",
+    buttonLink: "https://www.gardpro.com/",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 179.svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 126 (2).svg",
@@ -64,7 +64,7 @@ const slidesData4 = [
   {
     logo: "https://www.hubsyntax.com/uploads/Logo1 2.svg",
     buttonText: "View Live Project",
-     buttonLink: "https://himayush.myshopify.com/",
+    buttonLink: "https://himayush.myshopify.com/",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 271.svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 272.svg",
@@ -72,7 +72,7 @@ const slidesData4 = [
   {
     logo: "https://www.hubsyntax.com/uploads/250918.svg",
     buttonText: "View Live Project",
-     buttonLink: "https://www.pregamegummy.com/",
+    buttonLink: "https://www.doinkrollerz.com/",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 273.svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 274.svg",
@@ -91,7 +91,7 @@ const slidesData5 = [
   {
     logo: "https://www.hubsyntax.com/uploads/Vector (11).svg",
     buttonText: "View Live Project",
-     buttonLink: "https://smash.com/",
+    buttonLink: "https://smash.com/",
     buttonIcon: "https://hubsyntax.com/uploads/Vector(2).svg",
     mainImage: "https://www.hubsyntax.com/uploads/image 164.svg",
     overlayImage: "https://www.hubsyntax.com/uploads/image 168.svg",
@@ -111,60 +111,30 @@ const allSlidersData = [
 
 export default function PortfolioWeb() {
   const [showAll, setShowAll] = useState(false);
-  const [loadedImages, setLoadedImages] = useState({});
-
-  const preloadImages = (slides) => {
-    slides.forEach((slide) => {
-      ["logo", "mainImage", "overlayImage"].forEach((key) => {
-        const src = slide[key];
-        if (!loadedImages[src]) {
-          const img = new Image();
-          img.src = src;
-
-          img.onload = () => {
-            setLoadedImages((prev) => ({ ...prev, [src]: true }));
-          };
-        }
-      });
-    });
-  };
-
-  useEffect(() => {
-    preloadImages(allSlidersData.slice(0, 5).flat());
-  }, []);
-
   const visibleSliders = showAll ? allSlidersData : allSlidersData.slice(0, 5);
-
-  const topImage = "https://www.hubsyntax.com/uploads/Rectangle 2132.svg";
-  const bottomImage = "https://www.hubsyntax.com/uploads/Rectangle 2158.svg";
 
   return (
     <div className="relative">
       <DriveButton />
+
       <section className="relative">
         <div className="poftfolio-slider-wrapp">
-          {visibleSliders.map((slides, index) => {
-            preloadImages(slides);
-            return (
-              <BusinessGrowthSlider
-                key={index}
-                slides={slides}
-                index={index}
-                topImage={topImage}
-                bottomImage={bottomImage}
-                lazyLoaded={loadedImages}
-              />
-            );
-          })}
+          {visibleSliders.map((slides, index) => (
+            <BusinessGrowthSlider
+              key={index}
+              slides={slides}
+              index={index}
+              topImage="https://www.hubsyntax.com/uploads/Rectangle 2132.svg"
+              bottomImage="https://www.hubsyntax.com/uploads/Rectangle 2158.svg"
+              lazyLoaded={true}
+            />
+          ))}
         </div>
       </section>
 
       {allSlidersData.length > 5 && (
         <div className="get-btn mt-[30px]">
-          <Button
-            onClick={() => setShowAll(!showAll)}
-            className="get-start"
-          >
+          <Button onClick={() => setShowAll(!showAll)} className="get-start">
             {showAll ? "View Less" : "View More"}
           </Button>
         </div>

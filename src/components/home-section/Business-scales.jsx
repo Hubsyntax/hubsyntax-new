@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../Button";
 import LogosSlider from "./Logos-Slider";
+import { Link } from "react-router-dom";
 
 export function Counter({ target, duration = 2000 }) {
     const [count, setCount] = useState(0);
@@ -71,11 +72,13 @@ export default function BusinessSales() {
                     </div>
 
                     <div className='get-btn'>
-                        <Button
-                            text="Learn More"
-                            icon='https://hubsyntax.com/uploads/Group 1597883330.svg'
-                            className="get-start"
-                        />
+                        <Link to="/about">
+                            <Button
+                                text="Learn More"
+                                icon='https://hubsyntax.com/uploads/Group 1597883330.svg'
+                                className="get-start btn"
+                            />
+                        </Link>
                     </div>
                     <div className="clients bussiness">
                         {businessData.map((item, index) => (

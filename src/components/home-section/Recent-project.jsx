@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import fum from '../../images/fum.png';
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,37 +10,36 @@ import "swiper/css/pagination";
 
 const slideText = [
     {
-        img: fum,
-        title: 'Sales rose by 83.14% in six months, showing strong growth driven by effective strategies and increased customer demand.',
+        img:'https://hubsyntax.com/uploads/SFVzsdfxdf 1.svg',
+        title: 'ByBeth is a luxury wellness brand focused on premium, Australian-sourced bovine collagen and gut health formulas that support skin radiance, energy, and overall wellbeing. Its products blend powerful, purpose-chosen ingredients with sustainability at the core, redefining how beauty and health come from within.',
         button: 'View Project',
+        buttonLink: 'https://bybeth.com/',
     },
     {
-        img: fum,
-        title: 'Project 1 achieved remarkable success with innovative marketing campaigns.',
+        img:'https://hubsyntax.com/uploads/250917_Opium_Logo_Porcelain_RGB 4.svg',
+        title: 'Opium Floral is a premium floral & lifestyle boutique dedicated to blooming beauty and bespoke floral design. Their carefully selected flower collections and curated arrangements bring elegance to weddings, events, and everyday spaces. With attention to detail and creative flair, Opium Floral celebrates nature’s most captivating blooms.',
         button: 'View Project',
+        buttonLink: 'https://opiumfloral.com.au/',
     },
     {
-        img: fum,
-        title: 'Project 2 helped increase customer engagement and sales significantly.',
+        img:'https://hubsyntax.com/uploads/Sofa- Direct (1).svg',
+        title: 'Sofa Direct is a UK-based online furniture store offering a wide range of stylish and affordable sofas, chairs, and living room pieces. Their collection includes fabric, leather, corner, and recliner sofas designed to bring comfort and functionality to everyday living. With free delivery options across much of the UK and a focus on quality at great prices, Sofa Direct makes upgrading your home effortless.',
         button: 'View Project',
+        buttonLink: 'https://sofa-direct.co.uk/',
     },
     {
-        img: fum,
-        title: 'Project 3 delivered high ROI and strong brand visibility.',
+        img:'https://hubsyntax.com/uploads/Vector (12).svg',
+        title: 'Smash is a fitness supplement brand focused on creating high‑quality, scientifically‑informed formulas that help you train smarter, recover faster, and perform at your best. Their products are crafted with premium ingredients to support strength, energy, and overall wellbeing for every level of athlete.',
         button: 'View Project',
+        buttonLink: 'https://smash.com/',
     },
     {
-        img: fum,
-        title: 'Project 3 delivered high ROI and strong brand visibility.',
+        img: 'https://hubsyntax.com/uploads/250919.svg',
+        title: 'DoinkRollerz offers precision‑engineered rolling machines and accessories designed to help you roll perfect joints and blunts with ease. Crafted for both beginners and seasoned rollers, their products combine quality materials and intuitive design to elevate your smoking experience.',
         button: 'View Project',
-    },
-    {
-        img: fum,
-        title: 'Project 3 delivered high ROI and strong brand visibility.',
-        button: 'View Project',
+        buttonLink: 'https://www.doinkrollerz.com/',
     },
 ];
-
 
 export default function RecentProject() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -67,7 +66,7 @@ export default function RecentProject() {
     return (
         <section className="bg-[#f3fbff] py-[150px] recent-project-section">
             <div className='container'>
-                <div className='flex items-center  gap-[70px] pb-[10px] wrapper-recent-project'>
+                <div className='flex items-center  gap-[15px] pb-[10px] wrapper-recent-project'>
 
                     <p className='leading-[60px] max-w-[500px] text-[#FF3E5E] font-bold text-[50px] export-font'>
                         Explore Our <span className='text-[#00293F] font-bold'>Recent Projects</span>
@@ -75,17 +74,20 @@ export default function RecentProject() {
 
                     <div className="wapped-poject-text-wrapper">
                         <div className='wapped-poject-text'>
-                            <img src={slideText[activeIndex].img} className="wapped-project-img" />
-
+                            <div className="project-img">
+                                <img src={slideText[activeIndex].img} className="wapped-project-img" />
+                            </div>
                             <p className='text-[#2C2C2C] font-normal py-[15px] wrapped-project-des'>
                                 {slideText[activeIndex].title}
                             </p>
 
-                            <Button
-                                text={slideText[activeIndex].button}
-                                icon='https://hubsyntax.com/uploads/Vector(2).svg'
-                                className="get-start btn-slider"
-                            />
+                            <Link to={slideText[activeIndex].buttonLink} target="_blank" className="inline-block">
+                                <Button
+                                    text={slideText[activeIndex].button}
+                                    icon='https://hubsyntax.com/uploads/Vector(2).svg'
+                                    className="get-start btn-slider btn "
+                                />
+                            </Link>
                         </div>
                     </div>
 

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocation } from "react-router-dom";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,13 +130,14 @@ export default function KickProject() {
           <p className='font-normal text-[16px] text-[#2C2C2C] pb-[30px] execution-des'>
             From initial strategy to final execution, every detail is crafted to boost conversions and drive revenue. Our approach ensures your visitors are guided toward taking the desired actions, turning interest into measurable results that grow your business effectively.
           </p>
-          <Button
-            text=" Learn More"
-            icon='https://hubsyntax.com/uploads/Vector(2).svg'
-            className="get-start let-go"
-          />
+          <Link to='/about'>
+            <Button
+              text=" Learn More"
+              icon='https://hubsyntax.com/uploads/Vector(2).svg'
+              className="btn get-start let-go"
+            />
+          </Link>
         </div>
-
         <div className="onboarding mt-[50px] rounded-[30px] p-[55px] bg-white">
           {onboardingSteps.map((step, index) => (
             <div

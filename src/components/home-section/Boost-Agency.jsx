@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Button from "../Button";
 
 function Counter({ target, duration = 2, start }) {
     const getNumericValue = (value) => {
@@ -77,9 +78,14 @@ export default function BoostAgency() {
                     <p className='text-[#2C2C2C] font-normal text-[16px] pb-[10px] execution-des-subtitle' >
                         Ready to Skyrocket Your Conversions?
                     </p>
-                    <button className=" get-start flex items-center gap-[10px] text-[18px] let-go execution ">
-                        Let's Get Started! <img src='https://hubsyntax.com/uploads/Vector(2).svg' alt="" />
-                    </button>
+                    <a href="mailto:info@hubsyntax.com?subject=Scale%20My%20Business&body=Hello%20HubSyntax,%0A%0AI%20am%20interested%20in%20scaling%20my%20business.%0A%0AThanks!"
+                        className="block" >
+                        <Button
+                            text="Let's Get Started!"
+                            icon='https://hubsyntax.com/uploads/Vector(2).svg'
+                            className="get-start flex items-center gap-[10px] text-[18px] let-go execution btn"
+                        />
+                    </a>
                 </div>
                 {isMobile ? (
                     <div className='clients boost-agency py-[60px]'>
